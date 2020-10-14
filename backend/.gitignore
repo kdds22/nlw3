@@ -1,0 +1,15 @@
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+package.json
+package-lock.json
+yarn.lock
+
+tsconfig.json
+
+.vscode/
+
+# testing
+/coverage
