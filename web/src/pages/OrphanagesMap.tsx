@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FiPlus } from 'react-icons/fi';
+import { FiPlus, FiArrowRight } from 'react-icons/fi';
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 import Leafleat from 'leaflet';
 
@@ -17,7 +17,7 @@ const mapIcon = Leafleat.icon({
     
     iconSize: [58, 68],
     iconAnchor: [29, 68],
-    popupAnchor: [170, -5]
+    popupAnchor: [170, 2]
 });
 
 function OrphanagesMap() {
@@ -48,8 +48,11 @@ function OrphanagesMap() {
                 />
 
                 <Marker icon={mapIcon} position={[-10.9389873, -37.0677812]}>
-                    <Popup closeButton={false} minWidth={240} maxWidth={240}>
+                    <Popup closeButton={false} minWidth={240} maxWidth={240} className="map-popup">
                         Algum Orfanato de Aracaju
+                        <Link to="">
+                            <FiArrowRight size={20} color="#FFF" />
+                        </Link>
                     </Popup>
                 </Marker>
             </Map>
